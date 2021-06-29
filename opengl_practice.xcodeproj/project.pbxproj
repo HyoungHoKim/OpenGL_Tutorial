@@ -17,6 +17,7 @@
 		85F240CD2681F64B00B743F4 /* shaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240CC2681F64B00B743F4 /* shaders.cpp */; };
 		85F240D1268AFE9700B743F4 /* opengl_tutorial_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240CF268AFE9700B743F4 /* opengl_tutorial_02.cpp */; };
 		85F240D3268AFEF200B743F4 /* opengl_tutorial_03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240D2268AFEF200B743F4 /* opengl_tutorial_03.cpp */; };
+		85F240D8268B3EF500B743F4 /* opengl_tutorial_04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,9 @@
 		85F240CF268AFE9700B743F4 /* opengl_tutorial_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_02.cpp; sourceTree = "<group>"; };
 		85F240D2268AFEF200B743F4 /* opengl_tutorial_03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_03.cpp; sourceTree = "<group>"; };
 		85F240D6268B0A7600B743F4 /* SimpleTransform.vertexshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = SimpleTransform.vertexshader; sourceTree = "<group>"; };
+		85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_04.cpp; sourceTree = "<group>"; };
+		85F240DA268B409E00B743F4 /* TransformVertexShader.vertexshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = TransformVertexShader.vertexshader; sourceTree = "<group>"; };
+		85F240DB268B418A00B743F4 /* ColorFragmentShader.fragmentshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorFragmentShader.fragmentshader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		85F240B0268050AB00B743F4 /* opengl_practice */ = {
 			isa = PBXGroup;
 			children = (
+				85F240D9268B404000B743F4 /* tutorial_04_shader */,
 				85F240D5268B0A1900B743F4 /* tutorial_03_shader */,
 				85F240D4268B099600B743F4 /* tutorial_02_shader */,
 				85F240CB2681F62600B743F4 /* common */,
@@ -102,6 +107,7 @@
 				85F240C42681D71400B743F4 /* opengl_tutorial_01.cpp */,
 				85F240CF268AFE9700B743F4 /* opengl_tutorial_02.cpp */,
 				85F240D2268AFEF200B743F4 /* opengl_tutorial_03.cpp */,
+				85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */,
 			);
 			path = opengl_practice;
 			sourceTree = "<group>";
@@ -140,6 +146,15 @@
 				85F240D6268B0A7600B743F4 /* SimpleTransform.vertexshader */,
 			);
 			path = tutorial_03_shader;
+			sourceTree = "<group>";
+		};
+		85F240D9268B404000B743F4 /* tutorial_04_shader */ = {
+			isa = PBXGroup;
+			children = (
+				85F240DA268B409E00B743F4 /* TransformVertexShader.vertexshader */,
+				85F240DB268B418A00B743F4 /* ColorFragmentShader.fragmentshader */,
+			);
+			path = tutorial_04_shader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +216,7 @@
 			files = (
 				85F240D1268AFE9700B743F4 /* opengl_tutorial_02.cpp in Sources */,
 				85F240CD2681F64B00B743F4 /* shaders.cpp in Sources */,
+				85F240D8268B3EF500B743F4 /* opengl_tutorial_04.cpp in Sources */,
 				85F240D3268AFEF200B743F4 /* opengl_tutorial_03.cpp in Sources */,
 				85F240B2268050AB00B743F4 /* main.cpp in Sources */,
 				85F240C52681D71400B743F4 /* opengl_tutorial_01.cpp in Sources */,

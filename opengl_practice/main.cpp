@@ -16,5 +16,8 @@ int main(int argc, const char * argv[]) {
     // practice_02();
     
     // Matrix
-    practice_03();
+    // practice_03();
+    
+    // Draw Square
+    practice_04();
 }
