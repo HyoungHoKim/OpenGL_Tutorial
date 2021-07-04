@@ -18,6 +18,8 @@
 		85F240D1268AFE9700B743F4 /* opengl_tutorial_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240CF268AFE9700B743F4 /* opengl_tutorial_02.cpp */; };
 		85F240D3268AFEF200B743F4 /* opengl_tutorial_03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240D2268AFEF200B743F4 /* opengl_tutorial_03.cpp */; };
 		85F240D8268B3EF500B743F4 /* opengl_tutorial_04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */; };
+		85F240E12691D06E00B743F4 /* opengl_tutorial_05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240E02691D06E00B743F4 /* opengl_tutorial_05.cpp */; };
+		85F240E42691E58E00B743F4 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 85F240E22691E58E00B743F4 /* texture.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +64,12 @@
 		85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_04.cpp; sourceTree = "<group>"; };
 		85F240DA268B409E00B743F4 /* TransformVertexShader.vertexshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = TransformVertexShader.vertexshader; sourceTree = "<group>"; };
 		85F240DB268B418A00B743F4 /* ColorFragmentShader.fragmentshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorFragmentShader.fragmentshader; sourceTree = "<group>"; };
+		85F240DD2691D03C00B743F4 /* uvtemplate.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = uvtemplate.bmp; path = "../../../../Downloads/ogl-master/tutorial05_textured_cube/uvtemplate.bmp"; sourceTree = "<group>"; };
+		85F240DE2691D03C00B743F4 /* uvtemplate.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = uvtemplate.tga; path = "../../../../Downloads/ogl-master/tutorial05_textured_cube/uvtemplate.tga"; sourceTree = "<group>"; };
+		85F240DF2691D03C00B743F4 /* uvtemplate.DDS */ = {isa = PBXFileReference; lastKnownFileType = file; name = uvtemplate.DDS; path = "../../../../Downloads/ogl-master/tutorial05_textured_cube/uvtemplate.DDS"; sourceTree = "<group>"; };
+		85F240E02691D06E00B743F4 /* opengl_tutorial_05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_05.cpp; sourceTree = "<group>"; };
+		85F240E22691E58E00B743F4 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		85F240E32691E58E00B743F4 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		85F240B0268050AB00B743F4 /* opengl_practice */ = {
 			isa = PBXGroup;
 			children = (
+				85F240DC2691D01B00B743F4 /* tutorial_05_shader_texture */,
 				85F240D9268B404000B743F4 /* tutorial_04_shader */,
 				85F240D5268B0A1900B743F4 /* tutorial_03_shader */,
 				85F240D4268B099600B743F4 /* tutorial_02_shader */,
@@ -108,6 +117,7 @@
 				85F240CF268AFE9700B743F4 /* opengl_tutorial_02.cpp */,
 				85F240D2268AFEF200B743F4 /* opengl_tutorial_03.cpp */,
 				85F240D7268B3EF500B743F4 /* opengl_tutorial_04.cpp */,
+				85F240E02691D06E00B743F4 /* opengl_tutorial_05.cpp */,
 			);
 			path = opengl_practice;
 			sourceTree = "<group>";
@@ -127,6 +137,8 @@
 			children = (
 				85F240CC2681F64B00B743F4 /* shaders.cpp */,
 				85F240CE2683470500B743F4 /* shaders.hpp */,
+				85F240E22691E58E00B743F4 /* texture.cpp */,
+				85F240E32691E58E00B743F4 /* texture.hpp */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -155,6 +167,16 @@
 				85F240DB268B418A00B743F4 /* ColorFragmentShader.fragmentshader */,
 			);
 			path = tutorial_04_shader;
+			sourceTree = "<group>";
+		};
+		85F240DC2691D01B00B743F4 /* tutorial_05_shader_texture */ = {
+			isa = PBXGroup;
+			children = (
+				85F240DD2691D03C00B743F4 /* uvtemplate.bmp */,
+				85F240DF2691D03C00B743F4 /* uvtemplate.DDS */,
+				85F240DE2691D03C00B743F4 /* uvtemplate.tga */,
+			);
+			path = tutorial_05_shader_texture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +241,8 @@
 				85F240D8268B3EF500B743F4 /* opengl_tutorial_04.cpp in Sources */,
 				85F240D3268AFEF200B743F4 /* opengl_tutorial_03.cpp in Sources */,
 				85F240B2268050AB00B743F4 /* main.cpp in Sources */,
+				85F240E42691E58E00B743F4 /* texture.cpp in Sources */,
+				85F240E12691D06E00B743F4 /* opengl_tutorial_05.cpp in Sources */,
 				85F240C52681D71400B743F4 /* opengl_tutorial_01.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

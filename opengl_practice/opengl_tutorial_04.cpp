@@ -48,6 +48,10 @@ int practice_04(void)
     // Dark blue background
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
     
+    // Enable depth test
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
+    
     cout << glGetString(GL_VERSION) << endl;
     
     // tutorial_02 시작
@@ -175,7 +179,7 @@ int practice_04(void)
     do {
         
         // clear the screen
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         // Use our shader
         glUseProgram(programID);
         
