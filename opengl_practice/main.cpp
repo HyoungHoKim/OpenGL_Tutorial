@@ -19,5 +19,8 @@ int main(int argc, const char * argv[]) {
     // practice_03();
     
     // Draw Square
-    practice_04();
+    // practice_04();
+    
+    // Square Texturing
+    practice_05();
 }

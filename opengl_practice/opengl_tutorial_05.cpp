@@ -9,7 +9,7 @@
 
 GLFWwindow *window;
 
-int main(void)
+int practice_05(void)
 {
     if (!glfwInit())
     {
@@ -53,7 +53,9 @@ int main(void)
     glBindVertexArray(VertexArrayID);
     
     // Create and compile our GLSL program from the shaders
-    GLuint programID = LoadShaders("", "");
+    GLuint programID = LoadShaders(
+        "/Users/hyoukim/Desktop/opengl_practice/opengl_practice/tutorial_05_shader_texture/TransformVertexShader.vertexshader",
+        "/Users/hyoukim/Desktop/opengl_practice/opengl_practice/tutorial_05_shader_texture/TextureFragmentShader.fragmentshader");
     
     // Get a handle for our "MVP" uniform
     GLuint MatrixID = glGetUniformLocation(programID, "MVP");
@@ -67,7 +69,7 @@ int main(void)
     glm::mat4 MVP = Projection * View * Model;
     
     // Load the texture using any two methods
-    GLuint Texture = loadBMP_custom("uvtemplate.bmp");
+    GLuint Texture = loadBMP_custom("/Users/hyoukim/Downloads/ogl-master/tutorial05_textured_cube/uvtemplate.bmp");
     // GLuint Texture = loadDDS("uvtemplate.DDS");
     
     GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");

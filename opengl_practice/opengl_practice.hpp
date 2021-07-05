@@ -15,6 +15,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include "common/shaders.hpp"
+#include "common/texture.hpp"
 
 using namespace std;
 using namespace glm;
@@ -23,5 +24,6 @@ int practice_01(void);
 int practice_02(void);
 int practice_03(void);
 int practice_04(void);
+int practice_05(void);
 
 #endif /* opengl_practice_h */

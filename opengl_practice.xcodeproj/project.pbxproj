@@ -70,6 +70,8 @@
 		85F240E02691D06E00B743F4 /* opengl_tutorial_05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = opengl_tutorial_05.cpp; sourceTree = "<group>"; };
 		85F240E22691E58E00B743F4 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
 		85F240E32691E58E00B743F4 /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		85F240E52692A1BF00B743F4 /* TransformVertexShader.vertexshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = TransformVertexShader.vertexshader; sourceTree = "<group>"; };
+		85F240E62692A2F800B743F4 /* TextureFragmentShader.fragmentshader */ = {isa = PBXFileReference; lastKnownFileType = text; path = TextureFragmentShader.fragmentshader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,8 @@
 				85F240DD2691D03C00B743F4 /* uvtemplate.bmp */,
 				85F240DF2691D03C00B743F4 /* uvtemplate.DDS */,
 				85F240DE2691D03C00B743F4 /* uvtemplate.tga */,
+				85F240E52692A1BF00B743F4 /* TransformVertexShader.vertexshader */,
+				85F240E62692A2F800B743F4 /* TextureFragmentShader.fragmentshader */,
 			);
 			path = tutorial_05_shader_texture;
 			sourceTree = "<group>";
