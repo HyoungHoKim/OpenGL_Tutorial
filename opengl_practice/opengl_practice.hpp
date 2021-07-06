@@ -16,6 +16,7 @@
 
 #include "common/shaders.hpp"
 #include "common/texture.hpp"
+#include "common/controls.hpp"
 
 using namespace std;
 using namespace glm;
@@ -25,5 +26,6 @@ int practice_02(void);
 int practice_03(void);
 int practice_04(void);
 int practice_05(void);
+int practice_06(void);
 
 #endif /* opengl_practice_h */

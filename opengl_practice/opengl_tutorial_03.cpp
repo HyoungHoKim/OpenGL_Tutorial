@@ -26,7 +26,7 @@ int practice_03(void)
     
     // 새창을 열고, OpenGL 컨텍스트를 생성
     GLFWwindow *window; // 후술되는 코드를 보면, 이 변수는 전역(Global)입니다.
-    window = glfwCreateWindow(1024, 768, "Tutorial 02", NULL, NULL);
+    window = glfwCreateWindow(1024, 768, "Tutorial 03", NULL, NULL);
     if (window == NULL) {
         cerr << "GLFW 윈도우를 여는데 실패했습니다." << endl;
         glfwTerminate();

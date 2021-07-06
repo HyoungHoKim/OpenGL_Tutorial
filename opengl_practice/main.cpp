@@ -22,5 +22,8 @@ int main(int argc, const char * argv[]) {
     // practice_04();
     
     // Square Texturing
-    practice_05();
+    // practice_05();
+    
+    // keyboard and mouse input
+    practice_06();
 }

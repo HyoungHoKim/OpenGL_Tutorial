@@ -1,16 +1,16 @@
 //
-//  opengl_tutorial_05.cpp
+//  opengl_tutorial_06.cpp
 //  opengl_practice
 //
-//  Created by hyoukim on 2021/07/04.
+//  Created by hyoukim on 2021/07/06.
 //
 
 #include "opengl_practice.hpp"
 
-GLFWwindow *window;
-
-int practice_05(void)
+int practice_06(void)
 {
+    GLFWwindow *window;
+    
     if (!glfwInit())
     {
         cerr << "Failed to initialize GLFW" << endl;
@@ -23,7 +23,7 @@ int practice_05(void)
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
-    window = glfwCreateWindow(1024, 768, "Tutorial 05", NULL, NULL);
+    window = glfwCreateWindow(1024, 768, "Tutorial 06", NULL, NULL);
     if (window == NULL)
     {
         cerr << "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials." << endl;
@@ -40,6 +40,12 @@ int practice_05(void)
     }
     
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+    // Hide the moust and enable unlimited mouvment
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    
+    // Set the mouse at the center of the screen
+    glfwPollEvents();
+    glfwSetCursorPos(window, 1024/2, 768/2);
     
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
     
@@ -59,14 +65,6 @@ int practice_05(void)
     
     // Get a handle for our "MVP" uniform
     GLuint MatrixID = glGetUniformLocation(programID, "MVP");
-    // Projection matrixID
-    glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
-    // Camera matrix
-    glm::mat4 View = glm::lookAt(vec3(-4, 3, 3), vec3(0, 0, 0), vec3(0, 1, 0));
-    // Model matrix
-    glm::mat4 Model = glm::mat4(1.0f);
-    // ModelViewProjection
-    glm::mat4 MVP = Projection * View * Model;
     
     // Load the texture using any two methods
     GLuint Texture = loadDDS("/Users/hyoukim/Downloads/ogl-master/tutorial05_textured_cube/uvtemplate.DDS");
@@ -117,42 +115,42 @@ int practice_05(void)
 
     // Two UV coordinatesfor each vertex. They were created with Blender.
     static const GLfloat g_uv_buffer_data[] = {
-        0.000059f, 1.0f-0.000004f,
-        0.000103f, 1.0f-0.336048f,
-        0.335973f, 1.0f-0.335903f,
-        1.000023f, 1.0f-0.000013f,
-        0.667979f, 1.0f-0.335851f,
-        0.999958f, 1.0f-0.336064f,
-        0.667979f, 1.0f-0.335851f,
-        0.336024f, 1.0f-0.671877f,
-        0.667969f, 1.0f-0.671889f,
-        1.000023f, 1.0f-0.000013f,
-        0.668104f, 1.0f-0.000013f,
-        0.667979f, 1.0f-0.335851f,
-        0.000059f, 1.0f-0.000004f,
-        0.335973f, 1.0f-0.335903f,
-        0.336098f, 1.0f-0.000071f,
-        0.667979f, 1.0f-0.335851f,
-        0.335973f, 1.0f-0.335903f,
-        0.336024f, 1.0f-0.671877f,
-        1.000004f, 1.0f-0.671847f,
-        0.999958f, 1.0f-0.336064f,
-        0.667979f, 1.0f-0.335851f,
-        0.668104f, 1.0f-0.000013f,
-        0.335973f, 1.0f-0.335903f,
-        0.667979f, 1.0f-0.335851f,
-        0.335973f, 1.0f-0.335903f,
-        0.668104f, 1.0f-0.000013f,
-        0.336098f, 1.0f-0.000071f,
-        0.000103f, 1.0f-0.336048f,
-        0.000004f, 1.0f-0.671870f,
-        0.336024f, 1.0f-0.671877f,
-        0.000103f, 1.0f-0.336048f,
-        0.336024f, 1.0f-0.671877f,
-        0.335973f, 1.0f-0.335903f,
-        0.667969f, 1.0f-0.671889f,
-        1.000004f, 1.0f-0.671847f,
-        0.667979f, 1.0f-0.335851f
+        0.000059f, 0.000004f,
+        0.000103f, 0.336048f,
+        0.335973f, 0.335903f,
+        1.000023f, 0.000013f,
+        0.667979f, 0.335851f,
+        0.999958f, 0.336064f,
+        0.667979f, 0.335851f,
+        0.336024f, 0.671877f,
+        0.667969f, 0.671889f,
+        1.000023f, 0.000013f,
+        0.668104f, 0.000013f,
+        0.667979f, 0.335851f,
+        0.000059f, 0.000004f,
+        0.335973f, 0.335903f,
+        0.336098f, 0.000071f,
+        0.667979f, 0.335851f,
+        0.335973f, 0.335903f,
+        0.336024f, 0.671877f,
+        1.000004f, 0.671847f,
+        0.999958f, 0.336064f,
+        0.667979f, 0.335851f,
+        0.668104f, 0.000013f,
+        0.335973f, 0.335903f,
+        0.667979f, 0.335851f,
+        0.335973f, 0.335903f,
+        0.668104f, 0.000013f,
+        0.336098f, 0.000071f,
+        0.000103f, 0.336048f,
+        0.000004f, 0.671870f,
+        0.336024f, 0.671877f,
+        0.000103f, 0.336048f,
+        0.336024f, 0.671877f,
+        0.335973f, 0.335903f,
+        0.667969f, 0.671889f,
+        1.000004f, 0.671847f,
+        0.667979f, 0.335851f
     };
     
     GLuint vertexbuffer;
@@ -172,6 +170,13 @@ int practice_05(void)
         
         // Use our shader
         glUseProgram(programID);
+        
+        // Compute the MVP matrix from keyboard and mouse input
+        computeMatricesFromInputs(window);
+        glm::mat4 ProjectionMatrix = getProjectionMatrix();
+        glm::mat4 ViewMatrix = getViewMatrix();
+        glm::mat4 ModelMatrix = glm::mat4(1.0);
+        glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
         
         // Send our transformation to the currently bound shader,
         // in the "MVP" uniform
