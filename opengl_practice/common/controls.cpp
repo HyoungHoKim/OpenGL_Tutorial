@@ -19,7 +19,7 @@ glm::mat4 getProjectionMatrix(){
 }
 
 // Initial position : on +Z
-glm::vec3 position = glm::vec3(0, 0, 5);
+glm::vec3 position = glm::vec3(0, 0, 8);
 // Initial horizontal angle : toward -Z
 float horizontalAngle = 3.14;
 // Initial vertical angle : none
@@ -49,6 +49,12 @@ void computeMatricesFromInputs(GLFWwindow *window)
     // Compute new orientation
     horizontalAngle += mouseSpeed * float(1024/2 - xpos);
     verticalAngle += mouseSpeed * float (768/2 - ypos);
+    
+    // 앵글 제한
+    if (verticalAngle > 0.5f)
+        verticalAngle = 0.5f;
+    if (verticalAngle < -0.5)
+        verticalAngle = -0.5f;
     
     // Direction : Spherical coordinates to Cartesian coordinates conversion
     glm::vec3 direction(
@@ -94,6 +100,7 @@ void computeMatricesFromInputs(GLFWwindow *window)
                     position + direction, // and looks here : at the same position, plus "direction"
                     up // Head is up
                 );
+    
     // For the next frame, the "last time" will be "now"
     lastTime = currentTime;
 }

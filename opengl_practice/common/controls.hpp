@@ -14,6 +14,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 using namespace glm;
+using namespace std;
 
 void computeMatricesFromInputs(GLFWwindow *window);
 glm::mat4 getViewMatrix();
